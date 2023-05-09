@@ -1,0 +1,103 @@
+body {
+    background-image: url(img/pexels-karolina-grabowska-6805417.jpg);
+
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    /* görseli ortalamak için */
+}
+
+.button {
+    cursor: pointer;
+}
+
+.signup-box {
+    width: 430px;
+    height: 570px;
+    margin: auto;
+    background-color: white;
+    border-radius: 3px;
+    margin-top: 30px;
+}
+
+.login-box {
+    width: 430px;
+    height: 380px;
+    margin: auto;
+    border-radius: 3px;
+    background-color: white;
+    margin-top: 9.4em;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 17px;
+    font-weight: 1200;
+    font-size: 45px;
+    font-family: 'Poppins', sans-serif;
+    color: #431e01;
+}
+
+h4 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    color: #b68864;
+
+}
+
+form {
+    width: 330px;
+    margin-left: 42px;
+}
+
+form input {
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 6px;
+    outline: none;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+
+}
+
+input[type="button"] {
+    width: 310px;
+    height: 35px;
+    margin-top: 18px;
+    border: none;
+    background-color: #b68864;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-left: 18px;
+
+}
+
+p {
+    text-align: center;
+    padding-top: 1px;
+    font-size: 15px;
+
+}
+
+.para-2 {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
+
+.para-2 a {
+    color: #431e01;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.left a i {
+    color: #b68864;
+    margin: 20px;
+
+}

@@ -1,0 +1,64 @@
+﻿@model List<EmployeeTracking.Entity.Employee>
+@*@model List<EmployeeTracking.Entity.Department>   Depatmanları sadece getirmek istediğimizde.*@
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="text-center">
+    <h1 class="display-6 text-danger">Employee List</h1>
+
+@*       @foreach (var employee in Model)  //Bu kısım sadece çalışanları listeler.
+    {
+    <ul class="list-group">
+    <li class="list-group-item">
+    @employee.Id -
+    @employee.FirstName
+    @employee.LastName
+    @employee.DepartmentId
+    @employee.Department
+    </li>
+    </ul>
+    } 
+*@
+
+
+    @*   @foreach (var department in Model)  //Bu kısım sadece departmanları listeler.
+    {
+    <ul class="list-group">
+    <li class="list-group-item">
+    @department.Name
+    </li>
+    </ul>
+    } *@    
+
+
+
+
+    <table class="table">     @* Bu kısım çalışanları departmanları ile birlikte getirir.*@
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Department</th>
+                <th scope="col">Salary</th>
+
+            </tr>
+        </thead>
+    @foreach(var employee in Model)
+    {
+      
+            <tbody class="table-group-divider">
+                <tr>
+                    <th scope="row">@employee.Id</th>
+                    <td>@employee.FirstName</td>
+                    <td>@employee.LastName</td>
+                    <td>@employee.Department.Name</td>
+                    <td>@employee.Salary</td>
+                </tr>
+            </tbody>
+    }
+    </table>
