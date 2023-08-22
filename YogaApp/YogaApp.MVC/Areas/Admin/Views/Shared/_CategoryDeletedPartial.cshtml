@@ -1,0 +1,74 @@
+﻿ @model Category
+
+<button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal-@Model.Id">
+    <i class="fa-solid fa-trash"></i>
+</button>
+
+<div class="modal fade" id="modal-@Model.Id" tabindex="-1" aria-labelledby="modal-label-@Model.Id" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modal-label-@Model.Id">Category Silme</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table">
+                    <tr>
+                        <th>Id:</th>
+                        <td>@Model.Id</td>
+                        <th>Ad:</th>
+                        <td>@Model.Name</td>
+                    </tr>
+                    <tr>
+                        <th>Açıklama:</th>
+                        <td>@Model.Description</td>
+                    </tr>
+                    <tr>
+                        <th>Oluşturma Tarihi:</th>
+                        <td>@Model.CreatedDate</td>
+                        <th>Son Güncellenme Tarihi:</th>
+                        <td>@Model.ModifiedDate</td>
+                    </tr>
+                    <tr>
+                        <th>Aktif Mi?:</th>
+                        <td class="@(Model.IsActive ? "text-success" : "text-danger") fw-bold ">@(Model.IsActive ? "AKTİF" : "PASİF")</td>
+                        <th></th>
+                    </tr>
+                  
+                </table>
+                
+            </div>
+            <div>
+                <p class="text-danger text-center">
+                    @Model.Name
+                    Kategoriyi kalıcı olarak silme seçeneği, kategoriyi veritabanından silecektir.
+                </p>
+                <p class="text-warning text-center">
+                    @Model.Name Kategoriyi geçici olarak silme seçeneği silindiğinde geri dönüşüm kutusuna atılacaktır. Bunu geri alabilirsin!
+                </p>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Give Up</button>
+                <a type="button"
+                   class="btn btn-danger"
+                   asp-area="Admin"
+                   asp-controller="Category"
+                   asp-action="HardDelete"
+                   asp-route-id="@Model.Id">
+                    Kalıcı olarak silmek
+
+                </a>
+                <a type="button"
+                   class="btn btn-warning"
+                   asp-area="Admin"
+                   asp-controller="Category"
+                   asp-action="SoftDelete"
+                   asp-route-id="@Model.Id">
+                    Geçici olarak Silme 
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

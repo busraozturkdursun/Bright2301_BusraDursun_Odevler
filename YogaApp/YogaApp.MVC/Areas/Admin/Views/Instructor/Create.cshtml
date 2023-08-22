@@ -1,0 +1,47 @@
+﻿@model List<InstructorAddViewModel>
+
+    <h3 class="display-6 mt-3 ">Yeni Eğitmen</h3>
+    <form>
+    <div class="row g-4 align-items-center">
+            <div class="col-md-6">
+            <label for="exampleFormControlInput1" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="First Name">
+        </div>
+            <div class="col-md-6">
+            <label for="exampleFormControlInput1" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Last Name">
+        </div>
+            <div class="col-md-6">
+            <label for="exampleFormControlInput1" class="form-label">Education</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Last Name">
+        </div>
+            <div class="col-md-6">
+            <label for="exampleFormControlInput1" class="form-label">Price</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Last Name">
+        </div>
+            <div class="col-md-6">
+                <div class="form-floating mt-3">
+                    <select class="form-select"></select>
+                    <label></label>
+                </div>     
+            </div>
+        <div class="col-md-6">
+        <div class="form-floating mt-3">
+            <select class="form-select"></select>
+            <label></label>
+        </div>
+        </div>
+        <div class="col-md-6">
+            <label for="exampleFormControlTextarea1" class="form-label">About</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        </div>
+       
+    <button type="submit" class="btn btn-success mt-3">Submit</button>
+    <a asp-area="Admin" asp-controller="Instructor" asp-action="Index" class="btn btn-warning mt-3">
+        Tüm Eğitmenleri Listele
+    </a>
+
+</form>
+
+

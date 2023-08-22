@@ -1,0 +1,59 @@
+﻿<div id="layoutSidenav_nav">
+    <nav class="sb-sidenav accordion sb-sidenav-dark bg-warning" id="sidenavAccordion">
+        <div class="sb-sidenav-menu">
+            <div class="nav">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index" target="_blank">
+                    <div class="sb-nav-link-icon text-dark"><i class="fas fa-tachometer-alt"></i></div>
+                    Uygulamaya geri dön
+                </a>
+                <div class="sb-sidenav-menu-heading text-dark">General</div>
+                <a asp-area="Admin" asp-controller="Category" asp-action="Index" class="nav-link">
+                    <div class="sb-nav-link-icon text-dark"><i class="fas fa-tachometer-alt"></i></div>
+                    Kategoriler
+                </a>
+                <a asp-area="Admin" asp-controller="Instructor" asp-action="Index" class="nav-link">
+                    <div class="sb-nav-link-icon text-dark"><i class="fas fa-tachometer-alt"></i></div>
+                    Eğitmenler
+                </a>
+             
+               
+                <div class="sb-sidenav-menu-heading text-dark">Recycle bin</div>
+                <a asp-area="Admin" asp-controller="Category" asp-action="DeletedIndex" class="nav-link">
+                    <div class="sb-nav-link-icon  text-dark"><i class="fas fa-tachometer-alt"></i></div>
+                    Silinen Kategoriler
+                </a>
+                <a asp-area="Admin" asp-controller="Instructor" asp-action="DeletedIndex" class="nav-link">
+                    <div class="sb-nav-link-icon  text-dark"><i class="fas fa-tachometer-alt"></i></div>
+                    Silinen Eğitmenler
+                </a>
+              
+             
+                <div class="sb-sidenav-menu-heading text-dark">Settings</div>
+                <a class="nav-link" 
+                    asp-area="Admin"
+                    asp-controller="Home"
+                    asp-action="UserList"
+                >
+                    <div class="sb-nav-link-icon text-dark"><i class="fas fa-chart-area"></i></div>
+                    Users
+                </a>
+                <a class="nav-link" 
+                    asp-area="Admin"
+                    asp-controller="Home"
+                    asp-action="RoleList"
+                >
+                    <div class="sb-nav-link-icon  text-dark"><i class="fas fa-table"></i></div>
+                    Roles
+                </a>
+                <a class="nav-link text-white" href="tables.html">
+                    <div class="sb-nav-link-icon  text-dark"><i class="fas fa-table"></i></div>
+                    Uygulama Ayarları
+                </a>
+            </div>
+        </div>
+        <div class="sb-sidenav-footer bg-warning  text-dark">
+            <div class="small text-white">Login User:</div>
+            Büşra Öztürk
+        </div>
+    </nav>
+</div>

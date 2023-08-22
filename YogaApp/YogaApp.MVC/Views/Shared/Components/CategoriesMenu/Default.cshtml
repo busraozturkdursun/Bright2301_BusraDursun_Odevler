@@ -1,0 +1,17 @@
+﻿@model List<Category>
+<div class="list-group mt-4">
+    <a class="list-group-item list-group-item-action active bg-warning"
+       asp-area=""
+       asp-controller="Category"
+       asp-action="InstructorList"
+       asp-route-categoryurl=""
+       asp-route-brancherurl="">All Category</a>
+    @foreach (var category in Model)
+    {
+        <a class="list-group-item list-group-item-action"
+           asp-area=""
+           asp-controller="Category"
+           asp-action="InstructorList"
+           asp-route-categoryurl="@category.Url">@category.Name</a>
+    }
+</div>

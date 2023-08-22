@@ -1,0 +1,34 @@
+﻿@model Category
+
+<div class="mt-2">
+    <h2 class="diplay-6">Category Update</h2>
+</div>
+
+
+<div class="d-flex mt-4">
+    <form asp-area="Admin" asp-controller="Category" asp-action="Update" method="post">
+
+        <input type="hidden" asp-for="Id" />
+        <div class="text-danger" asp-validation-summary="All"></div>
+
+        <div class="mb-3">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" type="text"
+                   placeholder="Kategori adını giriniz.." />
+        </div>
+        
+        <div class="mb-3 form-check">
+            <input class="form-check-input" asp-for="IsActive" type="checkbox">
+            <label class="form-check-label" for="IsActive">
+                Aktif Mi?
+            </label>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+        <a asp-area="Admin" asp-controller="Category" asp-action="Index" class="btn btn-warning  btn-block">
+            Tüm Kategorileri Listele
+        </a>
+
+    </form>
+
+
+</div>
